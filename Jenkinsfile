@@ -26,4 +26,7 @@ pipeline {
             }
         }
     }
-}
+    tools {
+        maven 'M398'
+    }
+}   
