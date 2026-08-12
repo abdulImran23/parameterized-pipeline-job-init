@@ -25,6 +25,12 @@ pipeline {
                 sh """java -jar target/hello-demo-*.jar > /dev/null &"""
             }
         }
+        stage('Integration Testing') {
+            steps {
+                sh 'sleep 5s'
+                sh 'curl -s http://localhost:6767/hello'
+            }
+        }
     }
     tools {
         maven 'M3916'
